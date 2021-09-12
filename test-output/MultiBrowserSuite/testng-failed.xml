@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" name="Failed suite [MultiBrowserSuite]" parallel="tests">
+  <parameter name="browser" value="ie"/>
+  <test name="FirefoxTest(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.selenium.testcases.TestCase">
+        <methods>
+          <include name="crossBrowserTest"/>
+          <include name="crossBrowserTest"/>
+          <include name="closeBrowser"/>
+          <include name="crossBrowserTest"/>
+          <include name="selectTheForm"/>
+        </methods>
+      </class> <!-- com.selenium.testcases.TestCase -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+  <test name="IETest(failed)" parallel="tests">
+    <parameter name="browser" value="ie"/>
+    <classes>
+      <class name="com.selenium.testcases.TestCase">
+        <methods>
+          <include name="crossBrowserTest"/>
+          <include name="crossBrowserTest"/>
+          <include name="closeBrowser"/>
+          <include name="crossBrowserTest"/>
+          <include name="selectTheForm"/>
+        </methods>
+      </class> <!-- com.selenium.testcases.TestCase -->
+    </classes>
+  </test> <!-- IETest(failed) -->
+</suite> <!-- Failed suite [MultiBrowserSuite] -->
